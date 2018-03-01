@@ -63,6 +63,7 @@ public class MSButton
     private float x,y, width, height;
     private boolean clicked, marked;
     private String label;
+
     
     public MSButton ( int rr, int cc )
     {
@@ -89,6 +90,7 @@ public class MSButton
     public void mousePressed () 
     {
         clicked = true;
+
         //your code here
     }
 
@@ -114,12 +116,28 @@ public class MSButton
     public boolean isValid(int r, int c)
     {
         //your code here
+        if((r >= 0) && (r < 10))
+            return true;
+        
         return false;
     }
     public int countBombs(int row, int col)
     {
         int numBombs = 0;
         //your code here
+        if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+        {
+            numBombs++
+        }
+         if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+        {
+            numBombs++
+        }
+         if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+        {
+            numBombs++
+        }
+        
         return numBombs;
     }
 }
