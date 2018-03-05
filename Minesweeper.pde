@@ -125,19 +125,26 @@ public class MSButton
     {
         int numBombs = 0;
         //your code here
-        if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+        if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c]))
         {
-            numBombs++
+            numBombs++;
         }
-         if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+         if(isValid(r+1,c-1)&&bombs.contains(buttons[r+1][c-1]))
         {
-            numBombs++
+            numBombs++;
         }
-         if(isValid(r+1,c)&&bombs.contains(buttons[r+1][c])
+         if(isValid(r-1,c)&&bombs.contains(buttons[r-1][c]))
         {
-            numBombs++
+            numBombs++;
         }
-        
+         if(isValid(r+1,c+1)&&bombs.contains(buttons[r+1][c+1]))
+        {
+            numBombs++;
+        }
+         if(isValid(r-1,c+1)&&bombs.contains(buttons[r-1][c+1]))
+        {
+            numBombs++;
+        }
         return numBombs;
     }
 }
