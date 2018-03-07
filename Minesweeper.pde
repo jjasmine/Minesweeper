@@ -78,6 +78,14 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     //your code here
+    buttons[11][5].setLabel("W");
+    buttons[11][6].setLabel("I");
+    buttons[11][7].setLabel("N");
+    buttons[11][8].setLabel("N");
+    buttons[11][9].setLabel("E");
+    buttons[11][10].setLabel("R");
+
+    
 }
 
 public class MSButton
