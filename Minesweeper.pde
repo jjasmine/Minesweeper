@@ -125,7 +125,11 @@ public class MSButton
         //your code here
         if(keyPressed == true)
         {
-            marked = true;
+            marked = !marked;
+            if(marked == false)
+            {
+                clicked = false;
+            }
         }
         else if(bombs.contains(this))
         {
@@ -181,7 +185,7 @@ public class MSButton
     public boolean isValid(int r, int c)
     {
         //your code here
-        if((r >= 0) && (r < 10))
+        if(((r >= NUM_ROWS) && (r < 10)) && ((c >= NUM_COLS) && (c < 10)))
         {
             return true;
         }
